@@ -62,11 +62,11 @@ As such, those are in use within the default layer at this time.*/
  // |       |  F7   |  F8   |  F9   |  F10  |  F11  |       |                    |       |  F12  |       | PSCRN | PG_DN | PG_UP |       |
  // |       |       |       |       |       |       |       |                    |       |       |       | NEXT  | VOL-  | VOL+  | PLAY  |
                      bindings = <
-       &kp F1    &kp F2 &kp F3 &kp F4 &kp F5  &kp F6                       &kp F7    &kp F8 &kp F9 &kp F10 &kp F11  &kp F12
-       &kp GRAVE &none &kp N2 &kp N3 &kp N4  &kp N5                       &kp N6  &kp N7    &kp N8     &kp N9       &kp N0       &kp DEL
-       &trans    &kp F1 &kp F2 &kp F3 &kp F4  &kp F5                       &kp F6  &kp MINUS &kp EQUAL  &kp LBKT     &kp RBKT     &kp BSLH
-       &trans    &kp F7 &kp F8 &kp F9 &kp F10 &kp F11 &trans        &trans &kp F12 &trans    &kp PSCRN  &kp PG_DN    &kp PG_UP    &trans
-       &trans    &trans &trans &trans &trans  &trans  &trans        &trans &trans  &trans    &kp C_NEXT &kp C_VOL_DN &kp C_VOL_UP &kp C_PP
+       &kp F1    &kp F2     &kp F3     &kp F4    &kp F5        &kp F6                       &kp F7    &kp F8 &kp F9 &kp F10 &kp F11  &kp F12
+       &kp PSCRN &trans &trans   &kp PG_UP   &kp UNDER &kp LBRC                              &kp RBRC  &kp MINUS &kp UP    &trans    &trans  &kp DEL
+       &trans    &trans &kp HOME &kp PG_DN &kp END   &kp LBKT                              &kp RBKT  &kp LEFT  &kp DOWN  &kp RIGHT &trans  &trans
+       &kp LGUI  &trans &trans   &trans      &kp PLUS  &kp LPAR &trans            &trans     &kp RPAR  &kp EQUAL &trans    &trans    &trans  &kp RGUI
+       &kp LCTRL &trans &trans   &trans      &kp LALT  &trans   &kp LSHIFT        &kp RSHIFT &trans    &kp RALT  &trans    &trans    &trans  &kp RCTRL
                      >;
               };
               adjust_layer {
