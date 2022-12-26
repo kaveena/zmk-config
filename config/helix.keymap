@@ -47,20 +47,20 @@ As such, those are in use within the default layer at this time.*/
  // |      |      |      |      |      |      |  (   |                    |  )   |      |      |      | HOME | END  |      |
  // |      |      |      |      |      |      |      |                    |      |      |      |      |      |      |      |
                      bindings = <
-       &trans    &trans   &trans &trans   &trans   &trans                             &trans    &trans    &trans    &trans   &trans   &trans
-       &kp TILDE &kp EXCL &kp AT &kp HASH &kp DLLR &kp PRCNT                          &kp CARET &kp AMPS  &kp ASTRK &kp LPAR &kp RPAR &trans
-       &trans    &trans   &trans &trans   &trans   &trans                             &trans    &kp UNDER &kp PLUS  &kp LBRC &kp RBRC &kp PIPE
-       &trans    &trans   &trans &trans   &trans   &trans    &kp LPAR        &kp RPAR &trans    &trans    &trans    &kp HOME &kp END  &trans
-       &trans    &trans   &trans &trans   &trans   &trans    &trans          &trans   &trans    &trans    &trans    &trans   &trans   &trans
+       &bt BT_CLT &bt BT_SEL 0      &bt BT_SEL 1     &bt BT_SEL 2      &bt BT_SEL 3    &bt BT_SEL 4                     &trans          &trans          &trans          &trans          &trans &trans
+       &bt BT_NXT &trans            &trans           &rgb_ug RGB_BRI   &trans          &trans                           &trans          &trans          &rgb_ug RGB_SPI &trans          &trans &trans 
+       &bt BT_PRV &trans            &rgb_ug RGB_HUI  &rgb_ug RGB_BRD   &rgb_ug RGB_HUD &trans                           &rgb_ug RGB_TOG &rgb_ug RGB_EFF &rgb_ug RGB_SPD &rgb_ug RGB_EFD &trans &trans
+       &trans     &out OUT_TOG      &out OUT_USB     &out OUT_BLE      &trans          &trans       &trans     &trans   &trans          &trans          &trans          &trans          &trans &trans
+       &trans     &ext_power EP_TOG &ext_power EP_ON &ext_power EP_OFF &trans          &trans       &trans     &trans   &trans          &trans          &trans          &trans          &trans &trans
                      >;
               };
               raise_layer {
  // ---------------------------------------------------------------------------------------------------------------------------------
- // |       |       |       |       |       |       |                                    |       |       |       |       |       |       |
- // |   `   |   1   |   2   |   3   |   4   |   5   |                                    |   6   |   7   |   8   |   9   |   0   |  DEL  |
- // |       |  F1   |  F2   |  F3   |  F4   |  F5   |                                    |  F6   |   -   |   =   |   [   |   ]   |   \   |
- // |       |  F7   |  F8   |  F9   |  F10  |  F11  |       |                    |       |  F12  |       | PSCRN | PG_DN | PG_UP |       |
- // |       |       |       |       |       |       |       |                    |       |       |       | NEXT  | VOL-  | VOL+  | PLAY  |
+ // |  BT CLR  | BT SEL0  | BT SEL1  | BT SEL2  | BGT SEL3 | BT SEL4  |                                          |          |          |          |          |          |          |
+ // |  BT NXT  |          |          |  BR-     |          |          |                                          |          |          | RGB SP+  |          |          |          |
+ // |  BT PRV  |          |  HUI+    |  BR+     |  HUI-    |          |                                          | RGB TOG  | RGB EF+  | RGB SP-  | RGB EF-  |          |          |
+ // |          |  OUT_TOG | OUT_USB  |  OUT_BLE |          |          |          |                    |          |          |          |          |          |          |          |
+ // |          |  EP_TOG  | EP_ON    |  EP_OFF  |          |          |          |                    |          |          |          |          |          |          |          |
                      bindings = <
        &kp F1    &kp F2     &kp F3     &kp F4    &kp F5        &kp F6                       &kp F7    &kp F8 &kp F9 &kp F10 &kp F11  &kp F12
        &kp PSCRN &trans &trans   &kp PG_UP   &kp UNDER &kp LBRC                              &kp RBRC  &kp MINUS &kp UP    &trans    &trans  &kp DEL
