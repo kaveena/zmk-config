@@ -40,12 +40,11 @@ As such, those are in use within the default layer at this time.*/
                      >;
               };
               lower_layer {
- // ---------------------------------------------------------------------------------------------------------------------------------
- // |      |      |      |      |      |      |                                  |      |      |      |      |      |      |
- // |  ~   |  !   |  @   |  #   |  $   |  %   |                                  |  ^   |  &   |  *   |  (   |  )   |      |
- // |      |      |      |      |      |      |                                  |      |  _   |  +   |  {   |  }   | PIPE |
- // |      |      |      |      |      |      |  (   |                    |  )   |      |      |      | HOME | END  |      |
- // |      |      |      |      |      |      |      |                    |      |      |      |      |      |      |      |
+ // |  BT CLR  | BT SEL0  | BT SEL1  | BT SEL2  | BGT SEL3 | BT SEL4  |                                          |          |          |          |          |          |          |
+ // |  BT NXT  |          |          |  BR-     |          |          |                                          |          |          | RGB SP+  |          |          |          |
+ // |  BT PRV  |          |  HUI+    |  BR+     |  HUI-    |          |                                          | RGB TOG  | RGB EF+  | RGB SP-  | RGB EF-  |          |          |
+ // |          |  OUT_TOG | OUT_USB  |  OUT_BLE |          |          |          |                    |          |          |          |          |          |          |          |
+ // |          |  EP_TOG  | EP_ON    |  EP_OFF  |          |          |          |                    |          |          |          |          |          |          |          |
                      bindings = <
        &bt BT_CLR &bt BT_SEL 0      &bt BT_SEL 1     &bt BT_SEL 2      &bt BT_SEL 3    &bt BT_SEL 4                     &trans          &trans          &trans          &trans          &trans &trans
        &bt BT_NXT &trans            &trans           &rgb_ug RGB_BRI   &trans          &trans                           &trans          &trans          &rgb_ug RGB_SPI &trans          &trans &trans
@@ -56,11 +55,11 @@ As such, those are in use within the default layer at this time.*/
               };
               raise_layer {
  // ---------------------------------------------------------------------------------------------------------------------------------
- // |  BT CLR  | BT SEL0  | BT SEL1  | BT SEL2  | BGT SEL3 | BT SEL4  |                                          |          |          |          |          |          |          |
- // |  BT NXT  |          |          |  BR-     |          |          |                                          |          |          | RGB SP+  |          |          |          |
- // |  BT PRV  |          |  HUI+    |  BR+     |  HUI-    |          |                                          | RGB TOG  | RGB EF+  | RGB SP-  | RGB EF-  |          |          |
- // |          |  OUT_TOG | OUT_USB  |  OUT_BLE |          |          |          |                    |          |          |          |          |          |          |          |
- // |          |  EP_TOG  | EP_ON    |  EP_OFF  |          |          |          |                    |          |          |          |          |          |          |          |
+ // |  F1  |  F2  |  F3  |  F4   |  F5  |  F6  |                                  |  F7  |  F8  |  F9  |  F10 |  F11 |  F12 |
+ // | PSCRN|      |      | PG_UP |  _   |  {   |                                  |  }   |  -   |  UP  |      |      |  DEL |
+ // |      |      | HOME | PG_DN |  END |  [   |                                  |  ]   | LEFT | DOWN |RIGHT |      |      |
+ // | LGUI |      |      |       |  +   |  (   |      |                    |      |  )   |  =   |      |      |      | RGUI |
+ // | LCTRL|      |      |       | LALT |      |LSHIFT|                    |RSHIFT|      | RALT |      |      |      |RCTRL |
                      bindings = <
        &kp F1    &kp F2     &kp F3     &kp F4    &kp F5        &kp F6                       &kp F7    &kp F8 &kp F9 &kp F10 &kp F11  &kp F12
        &kp PSCRN &trans &trans   &kp PG_UP   &kp UNDER &kp LBRC                              &kp RBRC  &kp MINUS &kp UP    &trans    &trans  &kp DEL
@@ -71,11 +70,6 @@ As such, those are in use within the default layer at this time.*/
               };
               adjust_layer {
  // ---------------------------------------------------------------------------------------------------------------------------------
- // |    `     |    !     |    @     |    #     |    $     |    %     |                                          |    ^     |    &     |    *     |    (     |    )     |  EP TOG  |
- // |  BT CLR  | BT SEL0  | BT SEL1  | BT SEL2  | BGT SEL3 | BT SEL4  |                                          | RGB EFF+ | RGB HUE+ | RGB SAT+ | RGB SPD+ | RGB BRI+ | RGB TOG  |
- // |  BT NXT  | OUT TOG  | OUT USB  | OUT BLE  |          |          |                                          | RGB EFF- | RGB HUE- | RGB SAT- | RGB SPD- | RGB BRI- |          |
- // |  BT PRV  |          |          |          |          |          |    {     |                    |    }     |          |          |          |          |          |          |
- // |          |          |          |          |          |          |          |                    |          |          |          |          |          |          |          |
                      bindings = <
        &trans &trans &trans &trans &trans &trans                      &trans &trans &trans &trans &trans &trans
        &trans &trans &trans &trans &trans &trans                      &trans &trans &trans &trans &trans &trans
