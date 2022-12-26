@@ -14,7 +14,6 @@
  #define DEFAULT 0
  #define LOWER  1
  #define RAISE  2
- #define ADJUST 3
 
 /* NOTE: At the time of the creation of this keymap, there are no specified codes for 'eisuu' and 'kana' input in ZMK.
 However, 'LANG1' and 'LANG2' are fully-functioning candidates for 'kana' and 'eisuu' input respectively.
@@ -69,20 +68,20 @@ As such, those are in use within the default layer at this time.*/
        &trans    &trans &trans &trans &trans  &trans  &trans        &trans &trans  &trans    &kp C_NEXT &kp C_VOL_DN &kp C_VOL_UP &kp C_PP
                      >;
               };
-              adjust_layer {
- // ---------------------------------------------------------------------------------------------------------------------------------
- // |    `     |    !     |    @     |    #     |    $     |    %     |                                          |    ^     |    &     |    *     |    (     |    )     |  EP TOG  |
- // |  BT CLR  | BT SEL0  | BT SEL1  | BT SEL2  | BGT SEL3 | BT SEL4  |                                          | RGB EFF+ | RGB HUE+ | RGB SAT+ | RGB SPD+ | RGB BRI+ | RGB TOG  |
- // |  BT NXT  | OUT TOG  | OUT USB  | OUT BLE  |          |          |                                          | RGB EFF- | RGB HUE- | RGB SAT- | RGB SPD- | RGB BRI- |          |
- // |  BT PRV  |          |          |          |          |          |    {     |                    |    }     |          |          |          |          |          |          |
- // |          |          |          |          |          |          |          |                    |          |          |          |          |          |          |          |
-                     bindings = <
-       &kp GRAVE  &kp EXCL     &kp AT       &kp HASH     &kp DLLR     &kp PRCNT                             &kp CARET       &kp AMPS        &kp ASTRK       &kp LPAR        &kp RPAR        &ext_power EP_TOG
-       &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4                          &rgb_ug RGB_EFF &rgb_ug RGB_HUI &rgb_ug RGB_SAI &rgb_ug RGB_SPI &rgb_ug RGB_BRI &rgb_ug RGB_TOG 
-       &bt BT_NXT &out OUT_TOG &out OUT_USB &out OUT_BLE &trans       &trans                                &rgb_ug RGB_EFR &rgb_ug RGB_HUD &rgb_ug RGB_SAD &rgb_ug RGB_SPD &rgb_ug RGB_BRD &trans
-       &bt BT_PRV &trans       &trans       &trans       &trans       &trans       &kp LBRC        &kp RBRC &trans          &trans          &trans          &trans          &trans          &trans
-       &trans     &trans       &trans       &trans       &trans       &trans       &trans          &trans   &trans          &trans          &trans          &trans          &trans          &trans
-                     >;
-              };
+//              adjust_layer {
+// // ---------------------------------------------------------------------------------------------------------------------------------
+// // |    `     |    !     |    @     |    #     |    $     |    %     |                                          |    ^     |    &     |    *     |    (     |    )     |  EP TOG  |
+// // |  BT CLR  | BT SEL0  | BT SEL1  | BT SEL2  | BGT SEL3 | BT SEL4  |                                          | RGB EFF+ | RGB HUE+ | RGB SAT+ | RGB SPD+ | RGB BRI+ | RGB TOG  |
+// // |  BT NXT  | OUT TOG  | OUT USB  | OUT BLE  |          |          |                                          | RGB EFF- | RGB HUE- | RGB SAT- | RGB SPD- | RGB BRI- |          |
+// // |  BT PRV  |          |          |          |          |          |    {     |                    |    }     |          |          |          |          |          |          |
+// // |          |          |          |          |          |          |          |                    |          |          |          |          |          |          |          |
+//                     bindings = <
+//       &kp GRAVE  &kp EXCL     &kp AT       &kp HASH     &kp DLLR     &kp PRCNT                             &kp CARET       &kp AMPS        &kp ASTRK       &kp LPAR        &kp RPAR        &ext_power EP_TOG
+//       &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4                          &rgb_ug RGB_EFF &rgb_ug RGB_HUI &rgb_ug RGB_SAI &rgb_ug RGB_SPI &rgb_ug RGB_BRI &rgb_ug RGB_TOG 
+//       &bt BT_NXT &out OUT_TOG &out OUT_USB &out OUT_BLE &trans       &trans                                &rgb_ug RGB_EFR &rgb_ug RGB_HUD &rgb_ug RGB_SAD &rgb_ug RGB_SPD &rgb_ug RGB_BRD &trans
+//       &bt BT_PRV &trans       &trans       &trans       &trans       &trans       &kp LBRC        &kp RBRC &trans          &trans          &trans          &trans          &trans          &trans
+//       &trans     &trans       &trans       &trans       &trans       &trans       &trans          &trans   &trans          &trans          &trans          &trans          &trans          &trans
+//                     >;
+//              };
        };
 };
