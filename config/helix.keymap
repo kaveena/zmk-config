@@ -26,63 +26,62 @@ As such, those are in use within the default layer at this time.*/
  
               default_layer {
  // ---------------------------------------------------------------------------------------------------------------------------------
- // |  CAPS  |   1    |   2    |   3    |   4    |   5    |                                      |   6    |   7    |   8    |   9    |   0    |  INS   |
+ // | GRAVE  |   1    |   2    |   3    |   4    |   5    |                                      |   6    |   7    |   8    |   9    |   0    |  DEL   |
  // |  TAB   |   Q    |   W    |   E    |   R    |   T    |                                      |   Y    |   U    |   I    |   O    |   P    |  BSPC  |
- // |  CTRL  |   A    |   S    |   D    |   F    |   G    |                                      |   H    |   J    |   K    |   L    |   ;    |  RET   |
- // |  LGUI  |   Z    |   X    |   C    |   V    |   B    | SPACE  |                    |  SPACE |   N    |   M    |   ,    |   .    |   /    |  RGUI  |
- // |  LCTRL | GRAVE  |  NUBS  |  RAISE |  LALT  | LOWER  | LSHIFT |                    | RSHIFT | LOWER  |  RALT  |  RAISE |  NUBS  |   '    | RSHIFT |
+ // |  CTRL  |   A    |   S    |   D    |   F    |   G    |                                      |   H    |   J    |   K    |   L    |   ;    |   '    |
+ // |  SHIFT |   Z    |   X    |   C    |   V    |   B    |  LBKT  |                    |  RBKT  |   N    |   M    |   ,    |   .    |   /    |  RET   |
+ // | ADJUST |  ESC   |  ALT   |  LGUI  | EISUU  | LOWER  | SPACE  |                    |  SPACE | RAISE  |  KANA  |  LEFT  |  DOWN  |  UP    |  RIGHT |
                      bindings = <
-       &kp CAPS   &kp N1    &kp N2   &kp N3    &kp N4    &kp N5                                 &kp N6    &kp N7    &kp N8    &kp N9     &kp N0    &kp INS
-       &kp TAB    &kp Q     &kp W    &kp E     &kp R     &kp T                                  &kp Y     &kp U     &kp I     &kp O      &kp P     &kp BSPC
-       &kp ESC    &kp A     &kp S    &kp D     &kp F     &kp G                                  &kp H     &kp J     &kp K     &kp L      &kp SEMI  &kp RET
-       &kp LGUI   &kp Z     &kp X    &kp C     &kp V     &kp B     &kp SPACE         &kp SPACE  &kp N     &kp M     &kp COMMA &kp PERIOD &kp SLASH &kp RGUI
-       &mo LCTRL  &kp GRAVE &kp NUBS &mo RAISE &kp LALT  &mo LOWER &kp LSHIFT        &kp RSHIFT &mo LOWER &kp RALT  &mo RAISE &kp NUHS   &kp SQT   &kp RCTRL
+       &kp GRAVE  &kp N1  &kp N2   &kp N3   &kp N4    &kp N5                               &kp N6    &kp N7    &kp N8    &kp N9     &kp N0    &kp DEL
+       &kp TAB    &kp Q   &kp W    &kp E    &kp R     &kp T                                &kp Y     &kp U     &kp I     &kp O      &kp P     &kp BSPC
+       &kp LCTRL  &kp A   &kp S    &kp D    &kp F     &kp G                                &kp H     &kp J     &kp K     &kp L      &kp SEMI  &kp SQT
+       &kp LSHFT  &kp Z   &kp X    &kp C    &kp V     &kp B     &kp LBKT         &kp RBKT  &kp N     &kp M     &kp COMMA &kp PERIOD &kp SLASH &kp RET
+       &mo ADJUST &kp ESC &kp LALT &kp LGUI &kp LANG2 &mo LOWER &kp SPACE        &kp SPACE &mo RAISE &kp LANG1 &kp LEFT  &kp DOWN   &kp UP    &kp RIGHT
                      >;
               };
               lower_layer {
  // ---------------------------------------------------------------------------------------------------------------------------------
- // |  F1  |  F2  |  F3  |  F4   |  F5  |  F6  |                                  |  F7  |  F8  |  F9  |  F10 |  F11 |  F12 |
- // | PSCRN|      |      | PG_UP |  _   |  {   |                                  |  }   |  -   |  UP  |      |      |  DEL |
- // |      |      | HOME |PG_DOWN|  END |  [   |                                  |  ]   | LEFT | DOWN |RIGHT |      |      |
- // | LGUI |      |      |       |  +   |  (   |      |                    |      |  )   |  =   |      |      |      | RGUI |
- // | LCTRL|      |      |       | LALT |      |LSHIFT|                    |RSHIFT|      | RALT |      |      |      |RCTRL |
+ // |      |      |      |      |      |      |                                  |      |      |      |      |      |      |
+ // |  ~   |  !   |  @   |  #   |  $   |  %   |                                  |  ^   |  &   |  *   |  (   |  )   |      |
+ // |      |      |      |      |      |      |                                  |      |  _   |  +   |  {   |  }   | PIPE |
+ // |      |      |      |      |      |      |  (   |                    |  )   |      |      |      | HOME | END  |      |
+ // |      |      |      |      |      |      |      |                    |      |      |      |      |      |      |      |
                      bindings = <
-       &kp F1    &kp F2 &kp F3   &kp F4      &kp F5    &kp F6                                &kp F7    &kp F8    &kp F9    &kp F10   &kp F11 &kp F12
-       &kp PSCRN &trans &trans   &kp PG_UP   &kp UNDER &kp LBRC                              &kp RBRC  &kp MINUS &kp UP    &trans    &trans  &kp DEL
-       &trans    &trans &kp HOME &kp PG_DOWN &kp END   &kp LBKT                              &kp RBKT  &kp LEFT  &kp DOWN  &kp RIGHT &trans  &trans
-       &kp LGUI  &trans &trans   &trans      &kp PLUS  &kp LPAR &trans            &trans     &kp RPAR  &kp EQUAL &trans    &trans    &trans  &kp RGUI
-       &kp LCTRL &trans &trans   &trans      &kp LALT  &trans   &kp LSHIFT        &kp RSHIFT &trans    &kp RALT  &trans    &trans    &trans  &kp RCTRL
+       &trans    &trans   &trans &trans   &trans   &trans                             &trans    &trans    &trans    &trans   &trans   &trans
+       &kp TILDE &kp EXCL &kp AT &kp HASH &kp DLLR &kp PRCNT                          &kp CARET &kp AMPS  &kp ASTRK &kp LPAR &kp RPAR &trans
+       &trans    &trans   &trans &trans   &trans   &trans                             &trans    &kp UNDER &kp PLUS  &kp LBRC &kp RBRC &kp PIPE
+       &trans    &trans   &trans &trans   &trans   &trans    &kp LPAR        &kp RPAR &trans    &trans    &trans    &kp HOME &kp END  &trans
+       &trans    &trans   &trans &trans   &trans   &trans    &trans          &trans   &trans    &trans    &trans    &trans   &trans   &trans
                      >;
               };
               raise_layer {
  // ---------------------------------------------------------------------------------------------------------------------------------
- // |  BT CLR  | BT SEL0  | BT SEL1  | BT SEL2  | BGT SEL3 | BT SEL4  |                                          |          |          |          |          |          |          |
- // |  BT NXT  |          |          |  BR-     |          |          |                                          |          |          | RGB SP+  |          |          |          |
- // |  BT PRV  |          |  HUI+    |  BR+     |  HUI-    |          |                                          | RGB TOG  | RGB EF+  | RGB SP-  | RGB EF-  |          |          |
- // |          |  OUT_TOG | OUT_USB  |  OUT_BLE |          |          |          |                    |          |          |          |          |          |          |          |
- // |          |  EP_TOG  | EP_ON    |  EP_OFF  |          |          |          |                    |          |          |          |          |          |          |          |
+ // |       |       |       |       |       |       |                                    |       |       |       |       |       |       |
+ // |   `   |   1   |   2   |   3   |   4   |   5   |                                    |   6   |   7   |   8   |   9   |   0   |  DEL  |
+ // |       |  F1   |  F2   |  F3   |  F4   |  F5   |                                    |  F6   |   -   |   =   |   [   |   ]   |   \   |
+ // |       |  F7   |  F8   |  F9   |  F10  |  F11  |       |                    |       |  F12  |       | PSCRN | PG_DN | PG_UP |       |
+ // |       |       |       |       |       |       |       |                    |       |       |       | NEXT  | VOL-  | VOL+  | PLAY  |
                      bindings = <
-       &bt BT_CLT &bt BT_SEL 0      &bt BT_SEL 1     &bt BT_SEL 2      &bt BT_SEL 3    &bt BT_SEL 4                     &trans          &trans          &trans          &trans          &trans &trans
-       &bt BT_NXT &trans            &trans           &rgb_ug RGB_BRI   &trans          &trans                           &trans          &trans          &rgb_ug RGB_SPI &trans          &trans &trans 
-       &bt BT_PRV &trans            &rgb_ug RGB_HUI  &rgb_ug RGB_BRD   &rgb_ug RGB_HUD &trans                           &rgb_ug RGB_TOG &rgb_ug RGB_EFF &rgb_ug RGB_SPD &rgb_ug RGB_EFD &trans &trans
-       &trans     &out OUT_TOG      &out OUT_USB     &out OUT_BLE      &trans          &trans       &trans     &trans   &trans          &trans          &trans          &trans          &trans &trans
-       &trans     &ext_power EP_TOG &ext_power EP_ON &ext_power EP_OFF &trans          &trans       &trans     &trans   &trans          &trans          &trans          &trans          &trans &trans
+       &trans    &trans &trans &trans &trans  &trans                       &trans  &trans    &trans     &trans       &trans       &trans
+       &kp GRAVE &kp N1 &kp N2 &kp N3 &kp N4  &kp N5                       &kp N6  &kp N7    &kp N8     &kp N9       &kp N0       &kp DEL
+       &trans    &kp F1 &kp F2 &kp F3 &kp F4  &kp F5                       &kp F6  &kp MINUS &kp EQUAL  &kp LBKT     &kp RBKT     &kp BSLH
+       &trans    &kp F7 &kp F8 &kp F9 &kp F10 &kp F11 &trans        &trans &kp F12 &trans    &kp PSCRN  &kp PG_DN    &kp PG_UP    &trans
+       &trans    &trans &trans &trans &trans  &trans  &trans        &trans &trans  &trans    &kp C_NEXT &kp C_VOL_DN &kp C_VOL_UP &kp C_PP
                      >;
               };
               adjust_layer {
  // ---------------------------------------------------------------------------------------------------------------------------------
- // |  BT CLR  | BT SEL0  | BT SEL1  | BT SEL2  | BGT SEL3 | BT SEL4  |                                          |          |          |          |          |          |          |
- // |  BT NXT  |          |          |  BR-     |          |          |                                          |          |          | RGB SP+  |          |          |          |
- // |  BT PRV  |          |  HUI+    |  BR+     |  HUI-    |          |                                          | RGB TOG  | RGB EF+  | RGB SP-  | RGB EF-  |          |          |
- // |          |  OUT_TOG | OUT_USB  |  OUT_BLE |          |          |          |                    |          |          |          |          |          |          |          |
- // |          |  EP_TOG  | EP_ON    |  EP_OFF  |          |          |          |                    |          |          |          |          |          |          |          |
+ // |    `     |    !     |    @     |    #     |    $     |    %     |                                          |    ^     |    &     |    *     |    (     |    )     |  EP TOG  |
+ // |  BT CLR  | BT SEL0  | BT SEL1  | BT SEL2  | BGT SEL3 | BT SEL4  |                                          | RGB EFF+ | RGB HUE+ | RGB SAT+ | RGB SPD+ | RGB BRI+ | RGB TOG  |
+ // |  BT NXT  | OUT TOG  | OUT USB  | OUT BLE  |          |          |                                          | RGB EFF- | RGB HUE- | RGB SAT- | RGB SPD- | RGB BRI- |          |
+ // |  BT PRV  |          |          |          |          |          |    {     |                    |    }     |          |          |          |          |          |          |
+ // |          |          |          |          |          |          |          |                    |          |          |          |          |          |          |          |
                      bindings = <
        &trans &trans &trans &trans &trans &trans                      &trans &trans &trans &trans &trans &trans
        &trans &trans &trans &trans &trans &trans                      &trans &trans &trans &trans &trans &trans
        &trans &trans &trans &trans &trans &trans                      &trans &trans &trans &trans &trans &trans
        &trans &trans &trans &trans &trans &trans &trans        &trans &trans &trans &trans &trans &trans &trans
-       &trans &trans &trans &trans &trans &trans &trans        &trans &trans &trans &trans &trans &trans &trans       
-
+       &trans &trans &trans &trans &trans &trans &trans        &trans &trans &trans &trans &trans &trans &trans    
                      >;
               };
        };
